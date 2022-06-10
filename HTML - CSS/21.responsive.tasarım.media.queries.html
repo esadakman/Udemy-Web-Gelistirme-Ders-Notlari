@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Responsive Tasarım ve Media Queries</title>
+    <style>
+        /* p{
+            display: none;
+        }
+        @media(min-width : 768px) {
+            p {
+                display: block;
+            }
+        } */
+        /* body{
+            background: red;
+        }
+
+        @media(max-width: 1000px)  {
+            body {
+                background: blue;
+            }    
+        }
+        @media(max-width: 500px){
+            body {
+                background: black;
+            }
+        } */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1100px ;
+            margin: 0 auto;
+            display: flex;
+        }
+        .box1{
+            border: 1px solid black;
+            background: #a7a7a7;
+            padding: 10px;
+            width: 25%;
+
+        }
+        /* Tablet */
+        @media(max-width: 768px){
+            .box1{
+                width: 50%;
+            }
+        }
+
+        /* Mobile */
+        @media(max-width: 500px){
+            .box1{
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptate.</p> -->
+    <div class="container">
+    <div class="box1">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div class="box1">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div class="box1">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div class="box1">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    </div>
+    
+</body>
+</html>
