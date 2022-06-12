@@ -63,7 +63,7 @@ request.post(
       console.log(album);
     } else {
       // * Hata Durumu
-      console.log(object);
+      console.log(err);
     }
   }
 );
