@@ -27,17 +27,22 @@
 //   }, 2000);
 // }
 
+// ? process1 'in içine process2'yi callback olarak gönderdik ve bu sayede ön process1 sonrasında ise process2 çalıştı
 // process1(process2);
+// * 3 sn sonra process1, process1'den 2sn sonrada process2 çalıştı
 
 const langs = ["Python", "Java", "C++"];
 
+// gönderdiğim lang'i langs'e push etmek istiyorum
 function addLang(lang, callback) {
   setTimeout(function () {
     langs.push(lang);
     console.log("Eklendi");
-    callback();
+    callback(); // asenkronluğu yönetmek için callback yapıyoruz
   }, 2000);
 }
+
+// ? langs'in içinde ki tüm değerlerim console'a yazırmak istiyorum
 function getAllLangs() {
   setTimeout(function () {
     langs.forEach(function (lang) {
@@ -46,4 +51,9 @@ function getAllLangs() {
   }, 1000);
 }
 
+// * aşağıda ki şekilde yazdığımızda getAllLangs fonksiyonu addLang'i beklemeden çalışacak
+// addLang("Javascript");
+// getAllLangs(); // ! asenkron bir durum meydana geliyo
+
+// ? fakat biz önce eklenmesini sonra çalışmasını istiyoruz, bu sebeple callback ekliyoruz
 addLang("Javascript", getAllLangs);
