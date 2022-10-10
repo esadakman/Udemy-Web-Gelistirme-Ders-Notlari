@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-Child Selector</title>
+    <style>
+        p {
+            font-size: 1.5em;
+        }
+        /* p:nth-child(3){
+            color: red;
+        }
+        p:first-child{
+            color: blue;
+        }  
+        p:nth-child(even) {
+            color: red;
+        }
+        p:nth-child(odd) {
+            color: blue;
+        }*/
+        ul{
+            font-size: 1.5em;
+            list-style-type: none;
+        }
+        ul li:nth-child(2n + 1){
+            color: red;
+        }
+        ul li:nth-child(n+4){
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+    </ul>
+    <!-- <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, reprehenderit.
+    </p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, reprehenderit.
+    </p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, reprehenderit.
+    </p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, reprehenderit.
+    </p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, reprehenderit.
+    </p> -->
+</body>
+</html>
